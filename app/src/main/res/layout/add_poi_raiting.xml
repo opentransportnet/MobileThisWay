@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animationCache="false"
+        android:background="#B3CCCCCC"
+        android:clickable="true"
+        android:visibility="gone" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="40dp"
+            android:background="@color/text_primary"
+            android:visibility="visible"
+            android:id="@+id/d">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/buttonss" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:weightSum="3.0" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/add_rate"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:textStyle="bold"
+                        android:textSize="19dp" />
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="left"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="left"
+                                android:text="@string/complexity"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="16dp" />
+
+                            <RatingBar
+
+                                style="?android:attr/ratingBarStyle"
+                                android:id="@+id/complexity_ratingBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:isIndicator="false"
+                                android:numStars="5"
+                                android:progressTint="@color/color_register"
+                                android:rating="3.0"
+                                android:stepSize="1.0"
+
+                                android:scaleX="0.5"
+                                android:scaleY="0.5"/>
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="center_horizontal"
+                                android:text="@string/traffic"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="16dp" />
+
+                            <RatingBar
+                                style="?android:attr/ratingBarStyle"
+                                android:id="@+id/traffic_ratingBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:isIndicator="false"
+                                android:numStars="5"
+                                android:progressTint="@color/color_register"
+                                android:rating="3.0"
+                                android:stepSize="1.0"
+
+                                android:scaleX="0.5"
+                                android:scaleY="0.5"/>
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_weight="1.0" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="right"
+                            android:orientation="vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:gravity="right"
+                                android:text="@string/Quick"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="16dp" />
+
+                            <RatingBar
+                                style="?android:attr/ratingBarStyle"
+                                android:id="@+id/quickness_ratingBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:isIndicator="false"
+                                android:numStars="5"
+                                android:progressTint="@color/color_register"
+                                android:rating="3.0"
+                                android:stepSize="1.0"
+
+                                android:scaleX="0.5"
+                                android:scaleY="0.5"/>
+                        </LinearLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/rate_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:autoText="true"
+                    android:background="@color/colorTabsScroll"
+                    android:text="@string/rate_button" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <Button
+                        android:id="@+id/discard_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom|right"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#CCCCCC"
+                        android:onClick="onClicks"
+                        android:text="@string/discard_button" />
+                </FrameLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>

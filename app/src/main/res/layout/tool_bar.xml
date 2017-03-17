@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/color_primary">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <Button
+        android:id="@+id/back_button"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="0"
+        android:background="@android:color/transparent"
+        android:text="@string/icon_arrow_left"
+        android:textColor="#fff"
+        android:textSize="35dp"/>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#FFF"
+            android:textSize="20dp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_weight="0">
+
+            <Button
+                android:id="@+id/edit_button"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent"
+                android:text="@string/icon_pencil"
+                android:textColor="#fff"
+                android:textSize="30dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/delete_button"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent"
+                android:text="@string/icon_trash"
+                android:textColor="#fff"
+                android:textSize="30dp"
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/close_button"
+                android:layout_width="35dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10dp"
+                android:background="@android:color/transparent"
+                android:text="@string/icon_cancel"
+                android:textColor="#fff"
+                android:textSize="35dp"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.Toolbar>

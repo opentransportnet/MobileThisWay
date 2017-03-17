@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:id="@+id/rate"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@id/tool_bar"
+    android:animationCache="false"
+    android:background="#B3CCCCCC"
+    android:clickable="true"
+    android:visibility="gone">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/text_primary"
+        android:layout_margin="20dp"
+        android:visibility="gone"
+        android:id="@+id/type">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonss">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:weightSum="3.0">
+
+                <Button
+
+                    android:id="@+id/hide_movement_type_layout"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#FFFFFF"
+                    android:onClick="hideType"
+                    android:text="@string/icon_cancel"
+                    android:textSize="30dp"/>
+
+                <TextView
+                    android:id="@+id/transport_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:tag="tex"
+                    android:text="@string/movement"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:visibility="visible"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center">
+
+                            <android.support.design.widget.FloatingActionButton
+                                android:id="@+id/idwalk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                app:backgroundTint="@color/type_button"/>
+
+                            <TextView
+                                android:id="@+id/walk"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:elevation="100dp"
+                                android:text="@string/icon_walking"
+                                android:textColor="#ffffff"
+                                android:textSize="25dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/walk"
+                                android:id="@+id/walk_movement_type"
+                                android:layout_centerHorizontal="true"
+                                android:layout_alignParentBottom="true" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center">
+
+                            <android.support.design.widget.FloatingActionButton
+                                android:id="@+id/idbike"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                app:backgroundTint="@color/type_button"/>
+
+                            <TextView
+                                android:id="@+id/bike"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:elevation="100dp"
+                                android:text="@string/icon_bicycle"
+                                android:textColor="#000"
+                                android:textSize="25dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/bike"
+                                android:id="@+id/bike_movement_type"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true" />
+                        </RelativeLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center">
+
+                            <android.support.design.widget.FloatingActionButton
+                                android:id="@+id/idmetro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                app:backgroundTint="@color/type_button"/>
+
+                            <TextView
+                                android:id="@+id/tram"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:elevation="100dp"
+                                android:text="@string/icon_underground"
+                                android:textColor="#000"
+                                android:textSize="25dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/underground"
+                                android:id="@+id/metro_movement_type"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center">
+
+                            <android.support.design.widget.FloatingActionButton
+                                android:id="@+id/idbus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                app:backgroundTint="@color/type_button"/>
+
+                            <TextView
+                                android:id="@+id/bus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:elevation="100dp"
+                                android:text="@string/icon_bus"
+                                android:textColor="#000"
+                                android:textSize="25dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/bus"
+                                android:id="@+id/bus_movement_type"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center">
+
+                            <android.support.design.widget.FloatingActionButton
+                                android:id="@+id/idcar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                app:backgroundTint="@color/type_button"/>
+
+                            <TextView
+                                android:id="@+id/car"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:elevation="100dp"
+                                android:text="@string/icon_car"
+                                android:textColor="#000"
+                                android:textSize="25dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/car"
+                                android:id="@+id/car_movement_type"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center">
+
+                            <android.support.design.widget.FloatingActionButton
+                                android:id="@+id/idtrain"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                app:backgroundTint="@color/type_button"/>
+
+                            <TextView
+                                android:id="@+id/metro"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:elevation="100dp"
+                                android:text="@string/icon_train"
+                                android:textColor="#000"
+                                android:textSize="25dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/train"
+                                android:id="@+id/train_movement_type"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/change"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:background="@color/text_primary"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonss">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:weightSum="3.0">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+
+                        android:id="@+id/hide_comments_movement_type_layout"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#FFFFFF"
+                        android:onClick="hideType"
+                        android:text="@string/icon_cancel"
+                        android:textSize="30dp"/>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+
+
+
+
+
+                    <RelativeLayout
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center">
+
+                        <android.support.design.widget.FloatingActionButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="center"
+                            app:backgroundTint="@color/color_register"/>
+
+                        <TextView
+                            android:id="@+id/bike_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:elevation="100dp"
+                            android:text="@string/icon_bicycle"
+                            android:textColor="#ffffff"
+                            android:textSize="25dp"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/current_means_of_transport"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:tag="tex"
+                        android:text="@string/curmovement"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:visibility="visible"
+                        android:layout_marginRight="20dp" />
+
+
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/MOT_description"
+                    android:layout_width="fill_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textbox"
+                    android:gravity="center"
+                    android:hint="@string/description"
+                    android:maxLength="1000"/>
+
+                <LinearLayout
+                    android:id="@+id/foot"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingBottom="20dp">
+
+
+
+
+                        <RelativeLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:id="@+id/bicycle_layout"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center">
+
+                            <android.support.design.widget.FloatingActionButton
+                                android:id="@+id/select_bi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                app:backgroundTint="#009900"
+                                android:onClick="changeMovementType"/>
+
+                            <TextView
+                                android:id="@+id/start_route"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:elevation="100dp"
+                                android:text="@string/icon_ok"
+                                android:textColor="#ffffff"
+                                android:textSize="25dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/save"
+                                android:id="@+id/save_movment_type"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true" />
+                        </RelativeLayout>
+
+
+
+
+
+                        <RelativeLayout
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentRight="true"
+                            android:gravity="center">
+
+                            <android.support.design.widget.FloatingActionButton
+                                android:onClick="hideType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:gravity="center"
+                                app:backgroundTint="@color/type_button"/>
+
+                            <TextView
+                                android:id="@+id/cancel_route"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:elevation="100dp"
+                                android:text="@string/icon_cancel"
+                                android:textColor="#ffffff"
+                                android:textSize="25dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/cancel"
+                                android:id="@+id/cancel_movement_type"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true" />
+                        </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </FrameLayout>
+</FrameLayout>

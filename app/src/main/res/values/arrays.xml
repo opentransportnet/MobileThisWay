@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources tools:ignore="MissingTranslation" xmlns:tools="http://schemas.android.com/tools">
+    <string-array name="poi_categories">
+        <item>Select category</item>
+        <item>category 1</item>
+        <item>category 2</item>
+        <item>category 3</item>
+        <item>category 4</item>
+    </string-array>
+    <string-array name="create_poi_categories">
+        <item>category 1</item>
+        <item>category 2</item>
+        <item>category 3</item>
+        <item>category 4</item>
+    </string-array>
+    <string-array name="create_poi_categories_values">
+        <item>category 1</item>
+        <item>category 2</item>
+        <item>category 3</item>
+        <item>category 4</item>
+    </string-array>
+
+
+
+    <string-array name="create_poi_category_type">
+        <item>@string/parking</item>
+        <item>@string/train_tram_metro</item>
+        <item>@string/bus_station</item>
+        <item>@string/car_station</item>
+        <item>@string/taxi</item>
+        <item>@string/electric</item>
+    </string-array>
+
+
+    <string-array name="create_poi_transport_type">
+        <item>@string/car</item>
+        <item>@string/bus</item>
+        <item>@string/train</item>
+        <item>@string/walk</item>
+        <item>@string/bike</item>
+        <item>@string/underground</item>
+    </string-array>
+    <string-array name="create_poi_transport_type_values">
+        <item>@string/car</item>
+        <item>@string/bus</item>
+        <item>@string/train</item>
+        <item>@string/walk</item>
+        <item>@string/bike</item>
+        <item>@string/underground</item>
+    </string-array>
+
+    <string-array name="drawer_titles_array" color="@color/text_primary">
+        <item>@string/change_language</item>
+        <item>@string/your_journeys</item>
+        <item>@string/disclaimer</item>
+        <item>@string/title_delete_user_content</item>
+        <item>@string/log_out</item>
+    </string-array>
+
+    <string-array name="drawer_img_array">
+        <item>@string/icon_info</item>
+        <item>@string/icon_route</item>
+        <item>@string/icon_disclaim</item>
+        <item>@string/icon_bin</item>
+        <item>@string/icon_cancel</item>
+    </string-array>
+
+    <array name="languages">
+        <item>English</item>
+        <item>Français</item>
+        <!--<item>Latviešu</item>-->
+    </array>
+    <array name="language_codes">
+        <item>en</item>
+        <item>fr</item>
+        <!--<item>lv</item>-->
+    </array>
+</resources>

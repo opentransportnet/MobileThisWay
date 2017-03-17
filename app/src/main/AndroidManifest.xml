@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="eu.opentransportnet.thisway"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/logo_issy"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:label">
+        <activity
+            android:name="eu.opentransportnet.thisway.activities.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask">
+        </activity>
+        <activity android:name="eu.opentransportnet.thisway.activities.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="eu.opentransportnet.thisway.activities.CreatePoiActivity"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="eu.opentransportnet.thisway.activities.DisclaimerActivity"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name="eu.opentransportnet.thisway.activities.PinLocationActivity"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="eu.opentransportnet.thisway.activities.SearchRoutesActivity"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="eu.opentransportnet.thisway.activities.RouteListActivity"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="eu.opentransportnet.thisway.activities.RouteInfoActivity"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="eu.opentransportnet.thisway.activities.FinishRouteActivity"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="eu.opentransportnet.thisway.activities.RouteNavigationActivity"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="eu.opentransportnet.thisway.activities.ChangeLangActivity"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="eu.opentransportnet.thisway.activities.ShowPOIActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask">
+        </activity>
+    </application>
+
+</manifest>
